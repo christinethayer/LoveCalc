@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html ><!-- manifest="cache.manifest" Add back later
--->
+<html manifest="cache.manifest"> 
 	<head>
 		<!-- Card info -->
-		<title>Starter Kit</title>
+		<title>Love Calculator</title>
 		<meta name="description" content="My amazing card!">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="kik-prefer" content="true">
-		<link rel="kik-icon" href="/img/icon.png">
+		<meta name="kik-transparent-statusbar" content="true">
+		<link rel="kik-icon" href="/img/icon2.png">
 
 		<!-- Styles -->
 		<link rel="stylesheet" href="http://cdn.kik.com/app/2-DEV/app.min.css">
@@ -15,26 +15,81 @@
 	</head>
 
 	<body>
-		<!-- Pages -->
-
+		<!-- Main page-->
 		<div class="app-page" data-page="home">
-			<div class="app-topbar blue" >
-				<div class="app-title">Love Calculator</div>
+
+			<div class="app-topbar">
+				<div class="app-title">Love Calculator6</div>
 			</div>
+
 			<div class="app-content">
 				<div class="app-section">
-					<div class="app-button" data-target="page2">Yourself</div>
+					<div class="app-button" data-target="You">Between You and your Crush</div>
+					<div class="app-button" data-target="Friends">Between Your Kik Friend's</div>
+					<div class="app-button" data-target="People">Between 2 People</div>
+				</div>
+				<div class="heart">
+					<img src="img/heart3.png"/>
 				</div>
 			</div>
 		</div>
 
-		<div class="app-page" data-page="page2">
+		<!-- Calculate Your Love -->
+		<div class="app-page" data-page="You">
 			<div class="app-topbar">
-				<div class="app-button left" data-back="true">Back</div>
-				<div class="app-title">Page 2</div>
+				<div class="app-button left" data-back="true"></div>
+				<div class="app-title">You and your Crush</div>
 			</div>
 			<div class="app-content">
-				Page 2 is lonely
+				<div class="yourself">
+					<p>Info about me</p>
+					<img src="img/adam.jpg">
+				</div>
+				<div class="crush">
+					<p>Select your crush</p>
+					<img src="img/kyle.jpg">
+				</div>
+				 <div class="calc-section">
+				 	<div class="app-button" data-target="Calc">Calculate!</div>
+				 </div>
+			</div>
+		</div>
+
+		<!-- Calculate Friends Love-->
+		<div class="app-page" data-page="Friends">
+			<div class="app-topbar">
+				<div class="app-button left" data-back="true"></div>
+				<div class="app-title">Your Kik Friend's</div>
+			</div>
+			<div class="app-content">
+				<div class="friend1">
+					<p>I'm friend 1</p>
+					<img src="img/adam.jpg" id="people"/>
+				</div>
+				<div class="friend2">
+					<p>I'm friend 2</p>
+					<img src="img/kyle.jpg" id="people"/>
+				</div>
+				<div class="calc-section">
+					<div class="app-button" data-target="Calc">Calculate!</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Calculate 2 People's Love-->
+		<div class="app-page" data-page="People">
+			<div class="app-topbar">
+				<div class="app-button left" data-back="true"></div>
+				<div class="app-title">Two People's Love Potential</div>
+			</div>
+			<div class="app-content">
+				<div class="user-section">
+					<input class="app-input" type="text" placeholder="Name1">
+					<input class="app-input" type="text" placeholder="Name2">
+				</div>
+				<div class="calc-section">
+					<div class="app-button" data-target="Calc">Calculate!</div>
+				</div>
 			</div>
 		</div>
 

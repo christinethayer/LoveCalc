@@ -1,1 +1,28 @@
 /* put stuff here */
+.app-topbar{
+	background-color:#C33;
+}
+
+.app-content{
+	height:100%;
+	width:100%;
+	padding-top:10px;
+	background-color:#eaadad;
+	text-align: center;
+}
+
+.app-content .app-button{
+	color:#ff4c4c;
+}
+
+.app-content img{
+	text-align: center;
+	padding-top: 3px;
+	border-radius: 50%;
+}
+.app-content .heart{
+	text-align: center;
+}
+.app-content .heart img{
+	border-radius: 0;
+}
