@@ -2,6 +2,17 @@ CACHE MANIFEST
 
 img/adam.jpg
 img/kyle.jpg
-img/heart3.png
+img/heart3.jpg
+
+
+http://cdn.kik.com/app/1/default.css
+/css/styles.css
+
+/zerver/API.js
+http://zeptojs.com/zepto.min.js
+http://cdn.kik.com/cards/0/cards.js
+http://cdn.kik.com/app/1/app.js
+/js/main.js
+
 NETWORK:
 *
