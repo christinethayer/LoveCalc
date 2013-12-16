@@ -11,16 +11,13 @@
 		// put stuff here
 		console.log("testing I'm on the home page");
 		$(page).find('#You').clickable().on('click', function () {
-			console.log("I pushed button1");
 			App.load('You');
 		 });
 		$(page).find('#Friends').clickable().on('click', function () {
-			console.log("I pushed button2");
 			App.load('Friends');
 		 });
 
 		$(page).find('#People').clickable().on('click', function () {
-			console.log("I pushed button3");
 			App.load('People');
 		 });
 
