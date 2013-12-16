@@ -4,8 +4,6 @@
 	    cards.browser.setOrientationLock('portrait');
 	}
 
-	// console.log("Main Page");
-	// App.load('signup');
 
 	if (!cards.kik || !cards.kik.hasPermission || !cards.kik.hasPermission()) {
 	    App.load('signup');
