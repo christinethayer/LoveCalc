@@ -1,5 +1,4 @@
 App.populator('You', function (page, user) {
-
 	var user1 = new Array();
 	var user2 = new Array();
 
@@ -27,26 +26,29 @@ App.populator('You', function (page, user) {
 		        return;
 		    }
 		    else{
-		        var crushThumb = $('<img />');
-		        crushThumb.attr('src',users[0].thumbnail);
-		        $(page).find('#crushthumb').replaceWith(crushThumb);
-		       	//Should return the image back to a circle 
-		        $(page).find('#crushthumb').removeClass('heart');
+		        var user2Thumb = $('<img />');
+		        user2Thumb.attr('src',users[0].thumbnail);
+		        $(page).find('.heart').removeClass('heart');
+		        $(page).find('#crushthumb').replaceWith(user2Thumb);
 
-		        var crushName = users[0].fullName;
-		        $(page).find("#yourcrush").text(crushName);
+		        var user2Name = users[0].fullName;
+		        $(page).find("#yourcrush").text(user2Name);
 
-		        user2[0] = crushName;
-		        user2[1] = crushThumb;
+		        user2[0] = user2Name;
+		        user2[1] = user2Thumb;
 		        user2[2] = users[0].username;
+
+	        	var calcButton = $('<div />');
+	          	calcButton.addClass('app-button');
+	           	calcButton.text("Calculate!");
+	           	calcButton.attr('id', 'calc')
+	           	$(page).find('.calc-section').append(calcButton);
+
+	           	calcButton.clickable().on('click', function (){
+	           		App.load('Calc', {'user1' : user1, 'user2' : user2});
+	           	});
 		    }
 		});
-	});
-
-	$(page).find('#calc').clickable().on('click', function () {
-		console.log("my info " + user1);
-		console.log("crush info " + user2);
-		App.load('Calc', {'user1' : user1, 'user2' : user2});
 	});
 
 });
