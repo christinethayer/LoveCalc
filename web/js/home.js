@@ -1,7 +1,4 @@
 App.populator('home', function (page, user) {
-	cards.kik.getUser(function (user){
-		console.log(user.username);
-	})
 
 	console.log(user.username);
 	// put stuff here

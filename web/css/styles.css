@@ -12,8 +12,8 @@
 
 .signuplogo {
         width: 100%;
-        height: 100px;
-        background: url(../img/ui/heart3.png?inline=1);
+        height: 200px;
+        background: url(../img/whiteheart.png?inline=1);
         background-size: 182px auto;
         background-repeat: no-repeat;
         background-position: center center;
