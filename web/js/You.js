@@ -1,7 +1,13 @@
 App.populator('You', function (page, user) {
-	// put stuff here
-	console.log("testing you");
+	//Fetch your user info & replace the default
 	cards.kik.getUser(function (user){
-		console.log(user.username);
+
+		var yourThumb = $('<img />');
+		yourThumb.attr('src',user.thumbnail);
+		$(page).find('#yourthumb').replaceWith(yourThumb);
+
+		var yourName = user.fullName;
+		$(page).find("#yourname").text(yourName);
 	})
+
 });

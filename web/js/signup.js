@@ -1,15 +1,14 @@
 App.populator('signup', function (page) {
 	// put stuff here
 	console.log("signup page");
-	var $button    = $(page).find('.app-button'),
-	                buttonText = $button.text();
+	 var $button    = $(page).find('.app-button'),
+	                 buttonText = $button.text();
 
 	$(page).find('#login').clickable().on('click', function () {
 		//Adding "Signing In... state"
-		$button
-			.addClass('disabled')
-			.text('Signing in...');
-		$button[0].disabled = true;
+		$(page).find('.app-button').addClass('disabled');
+		$(page).find('.app-button').text('Logging in...');
+		$(page).find('.app-button')[0].disabled = true;
 
 		cards.kik.getUser(function (user){
 			if (cards.kik.hasPermission()){
@@ -19,6 +18,7 @@ App.populator('signup', function (page) {
 		});
 		
 		if (!cards.kik.hasPermission()) {
+			console.log("should call clean up")
 			cleanUp();
 		} else {
 	        App.dialog({
@@ -36,10 +36,10 @@ App.populator('signup', function (page) {
 	    }
     	
     	function cleanUp() {
-    	    $button
-    	     	.removeClass('disabled')
-    	     	.text(buttonText);
-    	    $button[0].disabled = false;
+    		console.log("remove");
+    	    $(page).find('.app-button').removeClass('disabled');
+    	    $(page).find('.app-button').text(buttonText);
+    	    $(page).find('.app-button')[0].disabled = false;
     	}
 	});
 });		
