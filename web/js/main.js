@@ -4,12 +4,18 @@
 	    cards.browser.setOrientationLock('portrait');
 	}
 
-	console.log("Main Page");
-	App.load('home');
+	// console.log("Main Page");
+	// App.load('signup');
 
-	try {
-		App.restore();
-	} catch (err) {
-		App.load('home');
+	if (!cards.kik || !cards.kik.hasPermission || !cards.kik.hasPermission()) {
+	    App.load('signup');
+	} else {
+	    App.load('home');
 	}
+
+	// try {
+	// 	App.restore();
+	// } catch (err) {
+	// 	App.load('signup');
+	// }
 })(App);

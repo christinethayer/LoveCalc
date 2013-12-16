@@ -3,6 +3,40 @@
 	background-color:#C33;
 }
 
+/* Sign up screen */
+
+/* Other */
+.app-content.signup{
+	background-color:#c33;
+}
+
+.signuplogo {
+        width: 100%;
+        height: 100px;
+        background: url(../img/ui/heart3.png?inline=1);
+        background-size: 182px auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+}
+
+.signuptext {
+        padding-top: 35%;
+}
+.signupbutton {
+        position: absolute;
+        bottom: 150px;
+        width: 100%;
+}
+
+.signupbutton .lighttext {
+        padding: 5px;
+}
+.lighttext {
+        color: #FFFFFF;
+        padding: 0px 15px;
+}
+
+/* Other */
 .app-content{
 	height:100%;
 	width:100%;
