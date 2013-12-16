@@ -12,10 +12,11 @@ App.populator('You', function (page, user) {
 		$(page).find("#yourname").text(yourName);
 
 		user1[0] = yourName;
-		user1[1] = yourThumb;
+		user1[1] = user.thumbnail;
 		user1[2] = user.username;
 	})
 
+	//Select a second user
 	$(page).find('#crushthumb').clickable().on('click', function () {
 		cards.kik.pickUsers({
 		    minResults : 0 , // number >= 0
@@ -35,9 +36,10 @@ App.populator('You', function (page, user) {
 		        $(page).find("#yourcrush").text(user2Name);
 
 		        user2[0] = user2Name;
-		        user2[1] = user2Thumb;
+		        user2[1] = users[0].thumbnail;
 		        user2[2] = users[0].username;
 
+	        	//Once two users are selected add the Calculate button
 	        	var calcButton = $('<div />');
 	          	calcButton.addClass('app-button');
 	           	calcButton.text("Calculate!");
