@@ -7,11 +7,9 @@ App.populator('You', function (page, user) {
 		var yourThumb = $('<img />');
 		yourThumb.attr('src',user.thumbnail);
 		$(page).find('#yourthumb').replaceWith(yourThumb);
+		$(page).find("#yourname").text(user.fullName);
 
-		var yourName = user.fullName;
-		$(page).find("#yourname").text(yourName);
-
-		user1[0] = yourName;
+		user1[0] = user.fullName;
 		user1[1] = user.thumbnail;
 		user1[2] = user.username;
 	})
@@ -23,19 +21,16 @@ App.populator('You', function (page, user) {
 		    maxResults : 1   // number >  0
 		}, function (users) {
 		    if ( !users ) {
-		        // action was cancelled by user
-		        return;
+		        return; //Action was cancelled by user
 		    }
 		    else{
 		        var user2Thumb = $('<img />');
 		        user2Thumb.attr('src',users[0].thumbnail);
 		        $(page).find('.heart').removeClass('heart');
 		        $(page).find('#crushthumb').replaceWith(user2Thumb);
+		        $(page).find("#yourcrush").text(users[0].fullName);
 
-		        var user2Name = users[0].fullName;
-		        $(page).find("#yourcrush").text(user2Name);
-
-		        user2[0] = user2Name;
+		        user2[0] = users[0].fullName;
 		        user2[1] = users[0].thumbnail;
 		        user2[2] = users[0].username;
 
@@ -43,7 +38,7 @@ App.populator('You', function (page, user) {
 	        	var calcButton = $('<div />');
 	          	calcButton.addClass('app-button');
 	           	calcButton.text("Calculate!");
-	           	calcButton.attr('id', 'calc')
+	           	calcButton.attr('id', 'calc');
 	           	$(page).find('.calc-section').append(calcButton);
 
 	           	calcButton.clickable().on('click', function (){

@@ -1,28 +1,27 @@
-App.populator('Friends', function (page) {
-	
+App.populator('Friends', function (page) {	
 	var user1 = new Array();
 	var user2 = new Array();
-	console.log("testing friends");
-	//
+
 	$(page).find('#people').clickable().on('click', function () {
 		cards.kik.pickUsers({
 		    minResults : 2 , // number >= 0
 		    maxResults : 2   // number >  0
 		}, function (users) {
 		    if ( !users ) {
-		        // action was cancelled by user
-		        return;
+		        return; //Action was cancelled by user
 		    }
 		    else{
-		    	//Remove people image
+		    	//Remove default select friends image
 		    	$(page).find('#people').remove();
 
+		    	//Add UI to make it the same as You & Crush
 		        var user1Thumb = $('<img />');
 		        user1Thumb.attr('src',users[0].thumbnail);
 		        $(page).find('.peoplePicker').append(user1Thumb);
 
 		        // var user1Name = users[0].fullName;
 		        // $(page).find("#peoplePicker").text(user1Name);
+
 		        user1[0] = users[0].fullName;
 		        user1[1] = users[0].thumbnail;
 		        user1[2] = users[0].username;
@@ -42,7 +41,7 @@ App.populator('Friends', function (page) {
 	        	var calcButton = $('<div />');
 	          	calcButton.addClass('app-button');
 	           	calcButton.text("Calculate!");
-	           	calcButton.attr('id', 'calc')
+	           	calcButton.attr('id', 'calc');
 	           	$(page).find('.calc-section').append(calcButton);
 
 	           	calcButton.clickable().on('click', function (){
