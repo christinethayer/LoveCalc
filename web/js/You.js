@@ -6,7 +6,7 @@ App.populator('You', function (page, user) {
 	cards.kik.getUser(function (user){
 		var yourThumb = $('<img />');
 		yourThumb.attr('src',user.thumbnail);
-		$(page).find('#yourthumb').replaceWith(yourThumb);
+		$(page).find('#yourpic').replaceWith(yourThumb);
 		$(page).find("#yourname").text(user.fullName);
 
 		user1[0] = user.fullName;
@@ -15,7 +15,7 @@ App.populator('You', function (page, user) {
 	})
 
 	//Select a second user
-	$(page).find('#crushthumb').clickable().on('click', function () {
+	$(page).find('#crushpic').clickable().on('click', function () {
 		cards.kik.pickUsers({
 		    minResults : 0 , // number >= 0
 		    maxResults : 1   // number >  0
@@ -27,7 +27,7 @@ App.populator('You', function (page, user) {
 		        var user2Thumb = $('<img />');
 		        user2Thumb.attr('src',users[0].thumbnail);
 		        $(page).find('.heart').removeClass('heart');
-		        $(page).find('#crushthumb').replaceWith(user2Thumb);
+		        $(page).find('#crushpic').replaceWith(user2Thumb);
 		        $(page).find("#yourcrush").text(users[0].fullName);
 
 		        user2[0] = users[0].fullName;

@@ -2,7 +2,7 @@ App.populator('Friends', function (page) {
 	var user1 = new Array();
 	var user2 = new Array();
 
-	$(page).find('#people').clickable().on('click', function () {
+	$(page).find('#friends').clickable().on('click', function () {
 		cards.kik.pickUsers({
 		    minResults : 2 , // number >= 0
 		    maxResults : 2   // number >  0
@@ -12,30 +12,25 @@ App.populator('Friends', function (page) {
 		    }
 		    else{
 		    	//Remove default select friends image
-		    	$(page).find('#people').remove();
+		    	$(page).find('#friends').remove();
+		    	$(page).find('#friendText').remove();
+		    	$(page).find('.friendPicker').removeClass('friendPicker');
+		    	$(page).find('.defaultFriends').removeClass('defaultFriends');
+
+				//Defining User1 and User2
+		    	user1[0] = users[0].fullName;
+		    	user1[1] = users[0].thumbnail;
+		    	user1[2] = users[0].username;
+
+		    	user2[0] = users[1].fullName;
+		    	user2[1] = users[1].thumbnail;
+		    	user2[2] = users[1].username;
 
 		    	//Add UI to make it the same as You & Crush
-		        var user1Thumb = $('<img />');
-		        user1Thumb.attr('src',users[0].thumbnail);
-		        $(page).find('.peoplePicker').append(user1Thumb);
-
-		        // var user1Name = users[0].fullName;
-		        // $(page).find("#peoplePicker").text(user1Name);
-
-		        user1[0] = users[0].fullName;
-		        user1[1] = users[0].thumbnail;
-		        user1[2] = users[0].username;
-
-		        var user2Thumb = $('<img />');
-		        user2Thumb.attr('src',users[1].thumbnail);
-		        $(page).find('.peoplePicker').append(user2Thumb);
-
-		        // var user2Name = users[1].fullName;
-		        // $(page).find("#yourcrush").text(user2Name);
-
-		        user2[0] = users[1].fullName;
-		        user2[1] = users[1].thumbnail;
-		        user2[2] = users[1].username;
+		    	$(page).find('#user1name').text(user1[0]);
+		        $(page).find('#user1pic').attr('src',user1[1]);
+		        $(page).find('#user2name').text(user2[0]);
+		        $(page).find('#user2pic').attr('src',user2[1]);
 
 	        	//Once two users are selected add the Calculate button
 	        	var calcButton = $('<div />');

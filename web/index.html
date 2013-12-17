@@ -24,7 +24,6 @@
 		        	        <div class="signuplogo"></div>
 		        	        <div class="lighttext">Most Accurate Love Calculator<br/>Find out love potential of people you care about.</div>
 		        	</div>
-
 		            <div class="signupbutton" >
 		                <div class="app-button" id="login">Log In!</div>
 		            </div>
@@ -33,11 +32,9 @@
 
 		<!-- Main page-->
 		<div class="app-page" data-page="home">
-
 			<div class="app-topbar">
 				<div class="app-title">Love Calculator</div>
 			</div>
-
 			<div class="app-content">
 				<div class="app-section">
 					<div class="app-button" id="You">Between You and your Crush</div>
@@ -50,46 +47,53 @@
 			</div>
 		</div>
 
-		<!-- Calculate Your Love -->
+		<!-- You -->
 		<div class="app-page" data-page="You">
 			<div class="app-topbar">
 				<div class="app-button left" data-back="true"></div>
-				<div class="app-title">You and your Crush</div>
+				<div class="app-title">Select Your Crush!</div>
 			</div>
 			<div class="app-content">
 				<div class="yourself">
-					<p id="yourname">Info about me</p>
-					<img src="http://kik.com/profile/images/nopic.jpg"" id="yourthumb">
+					<p id="yourname">Your Name...</p>
+					<img src="http://kik.com/profile/images/nopic.jpg" id="yourpic">
 				</div>
 				<div class="crush">
 					<p id="yourcrush">Select your crush</p>
 					<div class="heart">
-						<img src="img/peoplepick.png" id="crushthumb">
+						<img src="img/peoplepick.png" id="crushpic">
 					</div>
 				</div>
 				<div class="calc-section"></div>
 			</div>
 		</div>
 
-		<!-- Calculate Friends Love-->
+		<!--Friends Love-->
 		<div class="app-page" data-page="Friends">
 			<div class="app-topbar">
 				<div class="app-button left" data-back="true"></div>
 				<div class="app-title">Your Kik Friend's</div>
 			</div>
 			<div class="app-content">
-				<div class="picktwo">
-					<p style="color:white">Tap and select 2 friends from the list</p>
-					<div class="peoplePicker">
-						<img src="img/peoplepick2.png" id="people">
+				<div class="user1">
+					<p id="user1name"></p>
+					<img id="user1pic"/>
+				</div>
+				<div class="user2">
+					<p id="user2name"></p>
+					<img id="user2pic"/>
+				</div>
+				<div class="defaultFriends">
+					<p id="friendText">Tap and select 2 friends from the list</p>
+					<div class="friendPicker">
+						<img src="img/peoplepick2.png" id="friends">
 					</div>
 				</div>
-				<div class="calc-section">
-				</div>
+				<div class="calc-section"></div>
 			</div>
 		</div>
 
-		<!-- Calculate 2 People's Love-->
+		<!--People's Love-->
 		<div class="app-page" data-page="People">
 			<div class="app-topbar">
 				<div class="app-button left" data-back="true"></div>
@@ -134,7 +138,6 @@
 		<script src="http://cdn.kik.com/cards/0/cards.js"></script>
 		<script src="http://cdn.kik.com/app/2-DEV/app.min.js"></script>
 		<script src="/js/signup.js"></script>
-		<script src="/js/Calc2.js"></script>
 		<script src="/js/Calc.js"></script>
 		<script src="/js/Friends.js"></script>
 		<script src="/js/People.js"></script>

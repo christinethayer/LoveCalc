@@ -43,6 +43,7 @@
 	padding-top:10px;
 	background-color:#eaadad;
 	text-align: center;
+	color:#FFFFFF;
 }
 
 .app-content .app-button.disabled {
@@ -65,10 +66,10 @@
 	border-radius: 0;
 }
 
-.app-content .peoplePicker{
+.app-content .friendPicker{
 	text-align: center;
 }
-.app-content .peoplePicker img{
+.app-content .friendPicker img{
 	border-radius: 0;
 	padding-top: 20px;
 }
