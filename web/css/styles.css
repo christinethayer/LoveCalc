@@ -45,6 +45,9 @@
 	text-align: center;
 	color:#FFFFFF;
 }
+.app-content input{
+	color:#000000;
+}
 
 .app-content .app-button.disabled {
 	color:#999;

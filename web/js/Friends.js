@@ -21,7 +21,6 @@ App.populator('Friends', function (page) {
 		    	user1[0] = users[0].fullName;
 		    	user1[1] = users[0].thumbnail;
 		    	user1[2] = users[0].username;
-
 		    	user2[0] = users[1].fullName;
 		    	user2[1] = users[1].thumbnail;
 		    	user2[2] = users[1].username;
