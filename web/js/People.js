@@ -25,6 +25,7 @@ App.populator('People', function (page) {
 		$(page).find('#calc').click(callCalc2);
 		function callCalc2(){
 			App.load('Calc', {'user1' : user1, 'user2' : user2});
+			App.removeFromStack(1);
 		}
 	}
 });

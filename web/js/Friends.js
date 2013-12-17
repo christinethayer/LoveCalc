@@ -47,6 +47,7 @@ App.populator('Friends', function (page) {
 
 	           	calcButton.clickable().on('click', function (){
 	           		App.load('Calc', {'user1' : user1, 'user2' : user2});
+	           		App.removeFromStack(1);
 	           	});
 		    }
 		});
