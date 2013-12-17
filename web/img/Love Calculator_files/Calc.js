@@ -7,32 +7,17 @@ App.populator('Calc', function (page, users) {
 
 	// Adding User1 to the match screen
 	var user1Thumb = $('<img />');
-	//If the user doesn't have a profile pic set a default one
-	if( user1[1] === undefined ){
-		var defaultPic = "http://kik.com/profile/images/nopic.jpg";
-		user1Thumb.attr('src', defaultPic);
-	}
-	else{
-		user1Thumb.attr('src',user1[1]);
-	}
+	user1Thumb.attr('src',user1[1]);
 	$(page).find('#user1thumb').replaceWith(user1Thumb);
-	var user1N = user1[0].toString();
+	var user1N = user1[0];
 	$(page).find("#user1name").text(user1N);
 
 
 	// Adding User2 to the match screen
 	var user2Thumb = $('<img />');
-	//If the user doesn't have a profile pic set a default one
-	if( user2[1] === undefined ){
-		var defaultPic = "http://kik.com/profile/images/nopic.jpg";
-		user2Thumb.attr('src', defaultPic);
-	}
-	else{
-		user2Thumb.attr('src',user2[1]);
-	}
 	user2Thumb.attr('src',user2[1]);
 	$(page).find('#user2thumb').replaceWith(user2Thumb);
-	var user2N = user2[0].toString();
+	var user2N = user2[0];
 	$(page).find("#user2name").text(user2N);
 
 	// Adding match result
@@ -42,8 +27,8 @@ App.populator('Calc', function (page, users) {
 
 	function matching(user1, user2) {
 		//Formatting the strings
-		u1 = user1[0].toString().toLowerCase();
-		u2 = user1[0].toString().toLowerCase();
+		u1 = user1[0].toLowerCase();
+		u2 = user1[0].toLowerCase();
 		u1=u1.replace(/\s+/g,"");
 		u2=u2.replace(/\s+/g,"");
 

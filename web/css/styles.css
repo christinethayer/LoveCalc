@@ -45,6 +45,10 @@
 	text-align: center;
 }
 
+.app-content .app-button.disabled {
+	color:#999;
+}
+
 .app-content .app-button{
 	color:#ff4c4c;
 }
