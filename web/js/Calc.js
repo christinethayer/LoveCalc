@@ -39,7 +39,11 @@ App.populator('Calc', function (page, users) {
 		// 	return "98% match!";
 		// }
 		else{
-			return "You are a test match!";
+			var res=Math.random();
+			res=res*100;
+			res=parseInt(res);
+
+			return "You are a " + res +"% test match!";
 		}
 	}
 });
