@@ -61,6 +61,14 @@
 	border-radius: 0;
 }
 
+.app-content .peoplePicker{
+	text-align: center;
+}
+.app-content .peoplePicker img{
+	border-radius: 0;
+	padding-top: 20px;
+}
+
 .app-content#crushthumb img{
 	border-radius: 0;
 

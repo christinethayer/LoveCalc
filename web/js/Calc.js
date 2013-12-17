@@ -1,6 +1,4 @@
 App.populator('Calc', function (page, users) {
-	// put stuff here
-	console.log("testing calc");
 	var user1= users.user1;
 	var user2= users.user2;
 
