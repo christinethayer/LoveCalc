@@ -39,22 +39,26 @@ App.populator('Calc', function (page, users) {
 	function matching(user1, user2) {
 		//Formatting the strings
 		u1 = user1[0].toLowerCase();
-		u2 = user1[0].toLowerCase();
+		u2 = user2[0].toLowerCase();
 		u1=u1.replace(/\s+/g,"");
 		u2=u2.replace(/\s+/g,"");
 
+		var res;
+
 		if(u1==="christinethayer"){
-			return "100% match!";
+			res=100;
 		}
-		// else if(u1==="adam.allidina" &&& u2="kylelobban"){
-		//  	return "96% match!";
-		// }
+		else if((u1==="adamallidina" && u2==="kylelobban") || (u1==="kylelobban" && u2==="adamallidina") ){
+		  	res=96;
+		}
 		else{
+			console.log(u1);
+			console.log(u2);
 			var res=Math.random();
 			res=res*100;
 			res=parseInt(res);
 
-			return "You are a " + res +"% test match!";
 		}
+		return "You are a " + res +"% match!";
 	}
 });
