@@ -40,7 +40,7 @@ App.populator('You', function(page, user) {
 
 				var user2Thumb = $('<img />');
 				user2Thumb.attr('src', user2[1]);
-				$(page).find('.heart').removeClass('heart');
+				$(page).find('.heartplus').removeClass('heartplus');
 				$(page).find('#crushpic').replaceWith(user2Thumb);
 				$(page).find("#yourcrush").text(user2[0]);
 

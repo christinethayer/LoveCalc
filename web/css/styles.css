@@ -94,6 +94,7 @@
 	text-align: center;
 	padding-top: 3px;
 	border-radius: 50%;
+
 }
 .app-content .heart{
 	text-align: center;
@@ -118,6 +119,9 @@
 	border-radius: 0;
 	height:200px; 
 	width: 200px;
+}
+.app-content .heartplus.active img{
+	background-color: rgba(0, 0, 0, 0.2);
 }
 .app-content .friendPicker{
 	text-align: center;
