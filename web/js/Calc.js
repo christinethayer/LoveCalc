@@ -36,22 +36,27 @@ App.populator('Calc', function (page, users) {
 	$(page).find("#matchResult").append(result);
 
 	function matching(user1, user2) {
-		//Formatting the strings
-		u1 = user1[0].toLowerCase();
-		u2 = user2[0].toLowerCase();
-		u1=u1.replace(/\s+/g,"");
-		u2=u2.replace(/\s+/g,"");
-		var res;
+		u1name = user1[0].toLowerCase();
+		u2name = user2[0].toLowerCase();
+		u1name=u1name.replace(/\s+/g,"");
+		u2name=u2name.replace(/\s+/g,"");
+		u1username = user1[2].toLowerCase();
+		u2username = user2[2].toLowerCase();
 
-		if(u1==="christinethayer" || u2==="christinethayer"){
+
+		console.log(u1username);
+		console.log(u2username);
+		var res;
+		if(u1username ==="christine" || u2username ==="christine"){
 			res=100;
 		}
-		else if((u1==="adamallidina" && u2==="kylelobban") || (u1==="kylelobban" && u2==="adamallidina") ){
+		else if( (u1username==="adam.allidina" && u2username==="kylelobban")|| (u1username ==="kylelobban" && u2username==="adam.allidina") ){
 		  	res=96;
 		}
+		else if( (u1username==="becky" && u2username==="ayson89")|| (u1username ==="ayson89" && u2username==="becky") ){
+		  	res=98;
+		}
 		else{
-			console.log(u1);
-			console.log(u2);
 			var res=Math.random();
 			res=res*100;
 			res=parseInt(res);
