@@ -19,8 +19,8 @@
     		});
     		console.log(user1);
 
-			App.addToStack(0, ['home']);
 			App.load('Calc', cards.browser.linkData);
+			App.addToStack(0, ['home']);
 
 	    } else {
 	        // try {
