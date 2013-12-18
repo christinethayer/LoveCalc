@@ -23,11 +23,11 @@
 			App.addToStack(0, ['home']);
 
 	    } else {
-	        // try {
-	        //     App.restore();
-	        // } catch(err) {
+	        try {
+	            App.restore();
+	        } catch(err) {
 	            App.load('home');
-	       	// }
+	       	}
 	    }
 	}
 
