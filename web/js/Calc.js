@@ -15536,7 +15536,7 @@ App.populator('Calc', function(page, users) {
 	}
 
 	// Match Result: Matching algorithm
-	var result = $('<h1 />');
+	var result = $('<h2 />');
 	result.text(matching(user1, user2));
 	$(page).find("#matchResult").append(result);
 
@@ -15607,7 +15607,7 @@ App.populator('Calc', function(page, users) {
                 Math.seedrandom(hashsum);
                 Math.random();
                 Math.random();
-                return Math.floor(Math.random() * 91);
+                return Math.floor(Math.random() * 90);
 			}
 			res = calcLovePic(u1pic, u2pic) + calcLoveUsername(u1pic, u2pic);
             if (calcLoveName(user1name, user2name) == 1) {
