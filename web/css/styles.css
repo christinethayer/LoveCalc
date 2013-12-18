@@ -55,7 +55,7 @@
 	right: 0;
 	padding: 0;
 	width: 50px;
-	background-image: url(../img/kik.png);
+	background-image: url(../img/kik.png?inline=1);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 60% 60%;
@@ -91,10 +91,6 @@
 }
 
 .app-content img{
-	text-align: center;
-	padding-top: 3px;
-	border-radius: 50%;
-
 }
 .app-content .heart{
 	text-align: center;
@@ -114,6 +110,13 @@
 .app-content .heart img{
 	border-radius: 0;
 }
+
+.app-content .userpic img{
+	text-align: center;
+	padding-top: 3px;
+	border-radius: 50%;
+}
+/* You Styling */
 .app-content .heartplus img{
 	text-align: center;
 	border-radius: 0;
@@ -123,15 +126,24 @@
 .app-content .heartplus.active img{
 	background-color: rgba(0, 0, 0, 0.2);
 }
+.app-content#crushthumb img{
+	border-radius: 0;
+
+}
+
+/* Friends Styling */
+.app-content .defaultFriends{
+	padding: 0 8px 8px 0;
+}
 .app-content .friendPicker{
 	text-align: center;
 }
 .app-content .friendPicker img{
 	border-radius: 0;
 	padding-top: 20px;
+	height:250px; 
+	width: 250px;
 }
-
-.app-content#crushthumb img{
-	border-radius: 0;
-
+.app-content .friendPicker.active img{
+	background-color: rgba(0, 0, 0, 0.2);
 }

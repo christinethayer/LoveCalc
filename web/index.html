@@ -43,7 +43,7 @@
 				<div class="leftheart">
 					<img src="img/whitedouble.png" id="leftheart"/>
 				</div>
-				<i><div class="message">It's hard to believe that you can find out who your truly meant to be with via Kik!</div></i>
+				<i><div class="message">It's hard to believe that you can find out who your truly meant to be with Kik!</div></i>
 				<div class="rightheart">
 					<img src="img/whitedouble.png" id="leftheart"/>
 				</div>
@@ -59,12 +59,20 @@
 			<div class="app-content">
 				<div class="yourself">
 					<p id="yourname">Your Name...</p>
-					<img src="http://kik.com/profile/images/nopic.jpg" id="yourpic">
+					<div class="userpic">
+						<img src="img/noprofile.png" id="yourpic"/>
+					</div>
 				</div>
-				<div class="crush">
-					<p id="yourcrush">Select your crush</p>
-					<div class="heartplus">
+				<div class="defaultCrush">
+					<p id="defaultText">Select your crush</p>
+					<div class="heartplus" id="heartp">
 						<img src="img/whiteplus.png" id="crushpic">
+					</div>
+				</div>
+				<div class="user2">
+					<p id="user2name"></p>
+					<div class="userpic">
+						<img id="user2pic"/>
 					</div>
 				</div>
 				<div class="calc-section"></div>
@@ -80,16 +88,20 @@
 			<div class="app-content">
 				<div class="user1">
 					<p id="user1name"></p>
-					<img id="user1pic"/>
+					<div class="userpic">
+						<img id="user1pic"/>
+					</div>
 				</div>
 				<div class="user2">
 					<p id="user2name"></p>
-					<img id="user2pic"/>
+					<div class="userpic">
+						<img id="user2pic"/>
+					</div>
 				</div>
 				<div class="defaultFriends">
-					<h3 id="friendText">Pick 2 fellow kiksters and see if they're a match!</h3>
+					<p id="friendText">Pick two fellow kiksters and see if they're a match!</p>
 					<div class="friendPicker">
-						<img src="img/peoplepick2.png" id="friends">
+						<img src="img/friends.png" id="friends">
 					</div>
 				</div>
 				<div class="calc-section"></div>
@@ -123,11 +135,15 @@
 			<div class="app-content">
 				<div class="user1">
 					<p id="user1name"></p>
-					<img src="http://kik.com/profile/images/nopic.jpg" id="user1pic"/>
+					<div class="userpic">
+						<img src="img/noprofile.png" id="user1pic">
+					</div
 				</div>
 				<div class="user2">
 					<p id="user2name"></p>
-					<img src="http://kik.com/profile/images/nopic.jpg" id="user2pic"/>
+					<div class="userpic">
+						<img src="img/noprofile.png" id="user2pic">
+					</div
 				</div>
 				<div class="match">
 					<div id="matchResult"></div>

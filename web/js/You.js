@@ -37,10 +37,14 @@ App.populator('You', function(page, user) {
 					user2[1] = "img/noprofile.png";
 					console.log(user2[1]);
 				}
+				$(page).find('#heartp').remove();
+				$(page).find('.heartplus').removeClass('heartplus');
 
 				var user2Thumb = $('<img />');
 				user2Thumb.attr('src', user2[1]);
-				$(page).find('.heartplus').removeClass('heartplus');
+				user2Thumb.attr('id', 'crushpic');
+
+				$(page).find('#crushpic').addClass('userpic');
 				$(page).find('#crushpic').replaceWith(user2Thumb);
 				$(page).find("#yourcrush").text(user2[0]);
 
