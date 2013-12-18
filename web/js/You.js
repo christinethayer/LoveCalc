@@ -38,15 +38,10 @@ App.populator('You', function(page, user) {
 					console.log(user2[1]);
 				}
 				$(page).find('#heartp').remove();
+				$(page).find('#defaultText').remove();
 				$(page).find('.heartplus').removeClass('heartplus');
-
-				var user2Thumb = $('<img />');
-				user2Thumb.attr('src', user2[1]);
-				user2Thumb.attr('id', 'crushpic');
-
-				$(page).find('#crushpic').addClass('userpic');
-				$(page).find('#crushpic').replaceWith(user2Thumb);
-				$(page).find("#yourcrush").text(user2[0]);
+				$(page).find('#user2pic').attr('src', user2[1]);
+				$(page).find("#user2name").text(user2[0]);
 
 				//Once two users are selected add the Calculate button
 				var calcButton = $('<div />');
