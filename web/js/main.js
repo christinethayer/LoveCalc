@@ -8,8 +8,6 @@
 	    App.load('signup');
 	} else {
 	    if (cards.kik.returnToConversation) {
-    		console.log(cards.browser.linkData);
-
     		var user1 = new Array();
 
     		cards.kik.getUser(function (user){
@@ -17,10 +15,8 @@
     			user1[1] = user.thumbnail;
     			user1[2] = user.username;
     		});
-    		console.log(user1);
-
 			App.load('Calc', cards.browser.linkData);
-			App.addToStack(0, ['home']);
+			App.addToStack(0, ['home']); //Add home to the back stack
 
 	    } else {
 	        try {

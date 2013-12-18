@@ -37,7 +37,7 @@
         line-height: 72px;
 }
 .login-page .app-button.disabled {
-        color: #999;
+        color: #ff4c4c;
 }
 .login-page .app-button.active {
         background: #EEE;
