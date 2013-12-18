@@ -1,42 +1,53 @@
 /* put stuff here */
-.app-topbar{
-	background-color:#C33;
-}
 
 /* Sign up screen */
-
-/* Other */
-.app-content.signup{
-	background-color:#c33;
+.login-page .app-content {
+        position: relative;
+        background-color: #c33;
 }
-
-.signuplogo {
-        width: 100%;
+.login-page .title {
+        margin: 25% auto 0;
         height: 200px;
-        background: url(../img/whiteheart.png?inline=1);
-        background-size: 182px auto;
+        width: 200px;
+        background-image: url(../img/whiteheart.png?inline=1);
+        -webkit-background-size: 100%;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-size: 100%;
 }
-
-.signuptext {
-        padding-top: 35%;
+.login-page .message {
+		position: centre;
+        margin: 24px 32px 0;
+        color: rgba(255,255,255,0.8);
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: center;
 }
-.signupbutton {
+.login-page .button-wrap {
         position: absolute;
-        bottom: 150px;
+        bottom: 20%;
         width: 100%;
 }
-
-.signupbutton .lighttext {
-        padding: 5px;
+.login-page .app-button {
+        position: relative;
+        height: 72px;
+        background: #FFF;
+        color: rgb(0,138,237);
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 72px;
 }
-.lighttext {
-        color: #FFFFFF;
-        padding: 0px 15px;
+.login-page .app-button.disabled {
+        color: #999;
+}
+.login-page .app-button.active {
+        background: #EEE;
 }
 
 /* TOP BAR */
+.app-topbar{
+	background-color:#C33;
+}
 
 .app-topbar .app-button.kik{
 	right: 0;
