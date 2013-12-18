@@ -9,12 +9,9 @@ img/whiteheart.png
 img/icon2.png
 img/kik.png
 
-# zerver:css/main.min.css
 http://cdn.kik.com/app/1/default.css
 /css/styles.css
-# /zerver
 
-# zerver:js/main.min.js
 /zerver/API.js
 http://zeptojs.com/zepto.min.js
 http://cdn.kik.com/cards/0/cards.js
@@ -27,7 +24,6 @@ http://cdn.kik.com/app/1/app.js
 /js/You.js
 /js/home.js
 /js/main.js
-# /zerver
 
 NETWORK:
 *
