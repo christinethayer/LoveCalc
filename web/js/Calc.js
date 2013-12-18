@@ -43,7 +43,7 @@ App.populator('Calc', function (page, users) {
 		u2=u2.replace(/\s+/g,"");
 		var res;
 
-		if(u1==="christinethayer"){
+		if(u1==="christinethayer" || u2==="christinethayer"){
 			res=100;
 		}
 		else if((u1==="adamallidina" && u2==="kylelobban") || (u1==="kylelobban" && u2==="adamallidina") ){

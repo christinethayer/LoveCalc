@@ -27,7 +27,7 @@
 	            App.restore();
 	        } catch(err) {
 	            App.load('home');
-	       	}
+	        }
 	    }
 	}
 
