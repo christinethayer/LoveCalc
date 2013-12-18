@@ -56,6 +56,12 @@ App.populator('Calc', function (page, users) {
 		else if( (u1username==="becky" && u2username==="ayson89")|| (u1username ==="ayson89" && u2username==="becky") ){
 		  	res=98;
 		}
+		else if( (u1username==="mpr" && u2username==="andrea.roberts")|| (u1username ==="andrea.roberts" && u2username==="mpr") ){
+		  	res=100;
+		}
+		else if( (u1username==="newton.laura" && u2username==="mike.costa")|| (u1username ==="mike.costa" && u2username==="newton.laura") ){
+		  	res=98;
+		}
 		else{
 			var res=Math.random();
 			res=res*100;

@@ -27,7 +27,7 @@ App.populator('signup', function (page) {
 		        });
 		    }
 		});
-		
+			
     	function cleanUp() {
     	    $(page).find('.app-button').removeClass('disabled');
     	    $(page).find('.app-button').text("Sign in with Kik");
