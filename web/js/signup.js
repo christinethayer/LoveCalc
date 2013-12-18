@@ -1,8 +1,5 @@
 App.populator('signup', function (page) {
 	// put stuff here
-	console.log("signup page");
-	 var $button    = $(page).find('.app-button'),
-	                 buttonText = $button.text();
 
 	$(page).find('#login').clickable().on('click', function () {
 		//Adding "Signing In... state"
