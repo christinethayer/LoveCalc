@@ -6,7 +6,7 @@
         background-color: #c33;
 }
 .login-page .title {
-        margin: 25% auto 0;
+        margin: 22% auto 0;
         height: 200px;
         width: 200px;
         background-image: url(../img/whiteheart.png?inline=1);
@@ -15,7 +15,6 @@
         background-size: 100%;
 }
 .login-page .message {
-		position: centre;
         margin: 24px 32px 0;
         color: rgba(255,255,255,0.8);
         font-size: 18px;
