@@ -40,6 +40,8 @@ App.populator('Calc', function(page, users) {
 		u2name = user2[0].toLowerCase();
 		u1name = u1name.replace(/\s+/g, "");
 		u2name = u2name.replace(/\s+/g, "");
+		u1pic = user1[1];
+		u2pic = user2[1];
 		u1username = user1[2].toLowerCase();
 		u2username = user2[2].toLowerCase();
 
@@ -60,25 +62,42 @@ App.populator('Calc', function(page, users) {
 			res = 98;
 		} else {
 			function calcLoveName(user1, user2) {
-				var u1length = user1.length;
-				var u2length = user2.length;
-				var letter1;
+				var coupleName = user1+user2;
+				var coupleNameLength = coupleName.length;
 				var loveCount = 0;
-				// for (i = 0; i < u1length, i++) {
-				// 	letter1 = user1.substring(i, i + 1);
-				// 	if (letter1 == 'I') loveCount += 2;
-				// 	if (letter1 == 'L') loveCount += 2;
-				// 	if (letter1 == 'O') loveCount += 2;
-				// 	if (letter1 == 'V') loveCount += 2;
-				// 	if (letter1 == 'E') loveCount += 2;
-				// 	if (letter1 == 'Y') loveCount += 3;
-				// 	if (letter1 == 'O') loveCount += 1;
-				// 	if (letter1 == 'U') loveCount += 3;
-				// }
+				for (i = 0; i < coupleNameLength; i++) {
+					letter1 = coupleName.substring(i, i + 1);
+					if (letter1 == 'i') loveCount += 4;
+					if (letter1 == 'l') loveCount += 4;
+					if (letter1 == 'o') loveCount += 4;
+					if (letter1 == 'v') loveCount += 4;
+					if (letter1 == 'e') loveCount += 4;
+					if (letter1 == 'y') loveCount += 5;
+					if (letter1 == 'o') loveCount += 1;
+					if (letter1 == 'u') loveCount += 5;
+				}
 				return loveCount;
 			}
-			res = calcLoveName(u1name, u1name);
-			//res=parseInt(res);
+			function calcLovePic(user1, user2) {
+				console.log(user1);
+				console.log(user2);
+				if ((user1 !=="img/noprofile.png" && user2 ==="img/noprofile.png") || (user1 ==="img/noprofile.png" && user2 !=="img/noprofile.png")){
+					return 0;
+				}
+				else{
+					return 10;
+				}
+			}
+			function calcLoveUsername(user1, user2) {
+				return 20;
+			}
+			res = calcLoveName(u1name, u2name) + calcLovePic(u1pic, u2pic) + calcLoveUsername(u1pic, u2pic);
+
+			function hash(res) {
+				//normalize the data to % <=100
+				// randomize function with a seed
+				return ;
+			}
 
 		}
 		return "You are a " + res + "% match!";
@@ -87,7 +106,6 @@ App.populator('Calc', function(page, users) {
 	//Send Results: Via Kik
 	var kikButton = $('<div />');
 	kikButton.addClass('app-button kik');
-	//kikButton.text("Kik!");
 	kikButton.attr('id', 'kik');
 	$(page).find('.app-topbar').append(kikButton);
 	var linkData = {
