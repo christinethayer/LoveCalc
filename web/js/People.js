@@ -9,7 +9,7 @@ App.populator('People', function(page) {
 		console.log(user1);
 		console.log(user1);
 
-		if (user1[0].value === "" || user1[0].value === "") {
+		if (user1[0].value === "" || user2[0].value === "") {
 			App.dialog({
 				title: 'Unable to Calgit culate',
 				text: 'Names must be longer than 1 character',

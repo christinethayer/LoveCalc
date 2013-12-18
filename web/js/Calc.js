@@ -15,6 +15,9 @@ App.populator('Calc', function(page, users) {
 	}
 	user1pic.attr('src', user1[1]);
 	$(page).find('#user1pic').replaceWith(user1pic);
+	if (user1[2] === undefined) {
+		user1[2] = "nonkikuser";
+	}
 
 	// User2: Name & Profile Pic to the match screen
 	var user2name;
@@ -29,6 +32,9 @@ App.populator('Calc', function(page, users) {
 	}
 	user2pic.attr('src', user2[1]);
 	$(page).find('#user2pic').replaceWith(user2pic);
+	if (user2[2] === undefined) {
+		user2[2] = "nonkikuser";
+	}
 
 	// Match Result: Matching algorithm
 	var result = $('<h1 />');
