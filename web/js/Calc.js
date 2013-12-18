@@ -68,7 +68,7 @@ App.populator('Calc', function(page, users) {
 			res = 98;
 		} else {
 			function calcLoveName(user1, user2) {
-				var coupleName = user1+user2;
+				var coupleName = user1 + user2;
 				var coupleNameLength = coupleName.length;
 				var loveCount = 0;
 				for (i = 0; i < coupleNameLength; i++) {
@@ -87,10 +87,9 @@ App.populator('Calc', function(page, users) {
 			function calcLovePic(user1, user2) {
 				console.log(user1);
 				console.log(user2);
-				if ((user1 !=="img/noprofile.png" && user2 ==="img/noprofile.png") || (user1 ==="img/noprofile.png" && user2 !=="img/noprofile.png")){
+				if ((user1 !== "img/noprofile.png" && user2 === "img/noprofile.png") || (user1 === "img/noprofile.png" && user2 !== "img/noprofile.png")) {
 					return 0;
-				}
-				else{
+				} else {
 					return 10;
 				}
 			}
@@ -102,11 +101,13 @@ App.populator('Calc', function(page, users) {
 			function hash(res) {
 				//normalize the data to % <=100
 				// randomize function with a seed
-				return ;
+				return;
 			}
-
 		}
 		return "You are a " + res + "% match!";
+		//If res <50 should have broken heart image on the match scren
+		//If res 50-90 should add a nice heart image
+		//If res 100% should have a perfect match image
 	}
 
 	//Send Results: Via Kik
