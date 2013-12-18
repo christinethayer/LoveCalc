@@ -63,14 +63,24 @@ App.populator('Calc', function (page, users) {
 
 	//Send Results: Via Kik
 	var kikButton = $('<div />');
-	kikButton.addClass('app-button kik');
-	$(page).find('.app-topbar').append(kikButton);
-	kikButton.clickable().on('click', function (){
-		var kikImg = user2pic;
+  	kikButton.addClass('app-button kik');
+   	//kikButton.text("Kik!");
+   	kikButton.attr('id', 'kik');
+   	$(page).find('.app-topbar').append(kikButton);
+   	var linkData = {'user1' : user1, 'user2' : user2};
+
+   	kikButton.clickable().on('click', function (){
+		var KikTitle = "yo";
+		var KikDescription = "You ain't a match";
+	    var KikImg = "img/icon2.png";
+	    var KikLinkData = JSON.stringify(linkData);
 
 		cards.kik.send({
-		        pic      : kikImg,
-		        big      : false, 
+			  title    : KikTitle                    ,
+			  text     : KikDescription              ,
+			  pic      : KikImg                      ,
+			  big      : true                         , 
+			  linkData : KikLinkData 
 		});
 
 	});
