@@ -15514,6 +15514,9 @@ App.populator('Calc', function(page, users) {
 	}
 	user1pic.attr('src', user1[1]);
 	$(page).find('#user1pic').replaceWith(user1pic);
+	if (user1[2] === undefined) {
+		user1[2] = "nonkikuser";
+	}
 
 	// User2: Name & Profile Pic to the match screen
 	var user2name;
@@ -15528,6 +15531,9 @@ App.populator('Calc', function(page, users) {
 	}
 	user2pic.attr('src', user2[1]);
 	$(page).find('#user2pic').replaceWith(user2pic);
+	if (user2[2] === undefined) {
+		user2[2] = "nonkikuser";
+	}
 
 	// Match Result: Matching algorithm
 	var result = $('<h1 />');
@@ -15579,10 +15585,9 @@ App.populator('Calc', function(page, users) {
 			function calcLovePic(user1, user2) {
 				console.log(user1);
 				console.log(user2);
-				if ((user1 !=="img/noprofile.png" && user2 ==="img/noprofile.png") || (user1 ==="img/noprofile.png" && user2 !=="img/noprofile.png")){
+				if ((user1 !== "img/noprofile.png" && user2 === "img/noprofile.png") || (user1 === "img/noprofile.png" && user2 !== "img/noprofile.png")) {
 					return 0;
-				}
-				else{
+				} else {
 					return 10;
 				}
 			}
@@ -15596,7 +15601,7 @@ App.populator('Calc', function(page, users) {
                 }
                 return hash;
             };
-
+            
 			function calcLoveUsername(user1, user2) {
                 var hashsum = new String(user1).hashCode() + new String(user2).hashCode();
                 Math.seedrandom(hashsum);

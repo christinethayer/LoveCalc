@@ -45,7 +45,10 @@
 
 /* TOP BAR */
 .app-topbar{
-	background-color:#C33;
+	background-color:#b70f0f;
+	-webkit-box-shadow: 0 0 4px #000;
+	-moz-box-shadow: 0 0 4px #000;
+	box-shadow: 0 0 4px #000;
 }
 
 .app-topbar .app-button.kik{
@@ -71,7 +74,7 @@
 	height:100%;
 	width:100%;
 	padding-top:10px;
-	background-color:#eaadad;
+	background-color:#C33;
 	text-align: center;
 	color:#FFFFFF;
 }
@@ -91,14 +94,35 @@
 	text-align: center;
 	padding-top: 3px;
 	border-radius: 50%;
+
 }
 .app-content .heart{
 	text-align: center;
 }
+.app-content .leftheart img{
+	left:0;
+	border-radius: 0;
+	height:40px; 
+	width: 40px;
+}
+.app-content .rightheart img{
+	right:0;
+	border-radius: 0;
+	height:40px; 
+	width: 40px;
+}
 .app-content .heart img{
 	border-radius: 0;
 }
-
+.app-content .heartplus img{
+	text-align: center;
+	border-radius: 0;
+	height:200px; 
+	width: 200px;
+}
+.app-content .heartplus.active img{
+	background-color: rgba(0, 0, 0, 0.2);
+}
 .app-content .friendPicker{
 	text-align: center;
 }
