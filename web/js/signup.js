@@ -1,8 +1,5 @@
 App.populator('signup', function (page) {
-	// put stuff here
-
 	$(page).find('#login').clickable().on('click', function () {
-		//Adding "Signing In... state"
 		$(page).find('.app-button').addClass('disabled');
 		$(page).find('.app-button').text('Signing in...');
 		$(page).find('.app-button')[0].disabled = true;
