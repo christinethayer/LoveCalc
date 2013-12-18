@@ -9,7 +9,7 @@ App.populator('You', function (page, user) {
 		user1[2] = user.username;
 
 		if( user1[1] === null ){
-			user1[1] = "http://kik.com/profile/images/nopic.jpg";
+			user1[1] = "img/noprofile.png";
 		}
 
 		var yourThumb = $('<img />');
@@ -35,7 +35,7 @@ App.populator('You', function (page, user) {
 		    	console.log(user2[1]);
 		    	if( user2[1] === null ){
 		    		console.log(user2[1]);
-		    		user2[1] = "http://kik.com/profile/images/nopic.jpg";
+		    		user2[1] = "img/noprofile.png";
 		    		console.log(user2[1]);
 		    	}
 

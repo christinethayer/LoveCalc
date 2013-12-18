@@ -11,7 +11,7 @@ App.populator('Calc', function (page, users) {
 	$(page).find("#user1name").text(user1name);
 	var user1pic = $('<img />');
 	if( user1[1] === undefined ){
-		user1[1] = "http://kik.com/profile/images/nopic.jpg";
+		user1[1] = "img/noprofile.png";
 	}
 	user1pic.attr('src',user1[1]);
 	$(page).find('#user1pic').replaceWith(user1pic);
@@ -25,7 +25,7 @@ App.populator('Calc', function (page, users) {
 	$(page).find("#user2name").text(user2name);
 	var user2pic = $('<img />');
 	if( user2[1] === undefined ){
-		user2[1] = "http://kik.com/profile/images/nopic.jpg";
+		user2[1] = "img/noprofile.png";
 	}
 	user2pic.attr('src',user2[1]);
 	$(page).find('#user2pic').replaceWith(user2pic);
