@@ -20,9 +20,15 @@ App.populator('Friends', function (page) {
 				//Defining User1 and User2
 		    	user1[0] = users[0].fullName;
 		    	user1[1] = users[0].thumbnail;
+		    	if( user1[1] === null ){
+		    		user1[1] = "http://kik.com/profile/images/nopic.jpg";
+		    	}
 		    	user1[2] = users[0].username;
 		    	user2[0] = users[1].fullName;
 		    	user2[1] = users[1].thumbnail;
+		    	if( user2[1] === null ){
+		    		user2[1] = "http://kik.com/profile/images/nopic.jpg";
+		    	}
 		    	user2[2] = users[1].username;
 
 		    	//Add UI to make it the same as You & Crush
