@@ -23,11 +23,11 @@
 			App.load('Calc', cards.browser.linkData);
 
 	    } else {
-	        try {
-	            App.restore();
-	        } catch(err) {
+	        // try {
+	        //     App.restore();
+	        // } catch(err) {
 	            App.load('home');
-	       	}
+	       	// }
 	    }
 	}
 

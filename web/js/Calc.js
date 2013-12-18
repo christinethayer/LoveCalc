@@ -41,7 +41,6 @@ App.populator('Calc', function (page, users) {
 		u2 = user2[0].toLowerCase();
 		u1=u1.replace(/\s+/g,"");
 		u2=u2.replace(/\s+/g,"");
-
 		var res;
 
 		if(u1==="christinethayer"){
