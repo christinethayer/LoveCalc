@@ -15548,13 +15548,13 @@ App.populator('Calc', function(page, users) {
 		u1username = user1[2].toLowerCase();
 		u2username = user2[2].toLowerCase();
 
-		//console.log(u1username);
-		//console.log(u2username);
 		var res;
         var answer = "a Happy Couple";
 		if (u1username === u2username) {
 			res = 100;
             answer = "Narcissism Defined"
+        } else if (u1username === "christine" || u2username === "christine") {
+        	res = 100;
 		} else if ((u1username === "adam.allidina" && u2username === "kylelobban") || (u1username === "kylelobban" && u2username === "adam.allidina")) {
 			res = 96;
 		} else if ((u1username === "becky" && u2username === "ayson89") || (u1username === "ayson89" && u2username === "becky")) {
@@ -15568,14 +15568,14 @@ App.populator('Calc', function(page, users) {
 		} else {
 			function calcLoveName(user1, user2) {
                 var names = user1.split(" ");
-                var fname1 = names[0];
+                var fname1 = names[0].toUpperCase();
                 var lname1 = names[names.length - 1];
                 var names = user2.split(" ");
-                var fname2 = names[0];
+                var fname2 = names[0].toUpperCase();
                 var lname2 = names[names.length - 1];
-                if (fnames.fname1 && fnames.fname2) {
-                    if (fnames.fname1.m > 0.5 && fnames.fname2.m < 0.5 ||
-                            fnames.fname2.m > 0.5 && fnames.fname1.m < 0.5) {
+                if (fnames[fname1] && fnames[fname2]) {
+                    if (fnames[fname1].m > 0.5 && fnames[fname2].m < 0.5 ||
+                            fnames[fname2].m > 0.5 && fnames[fname1].m < 0.5) {
                         return 1;
                     }
                 }
@@ -15605,16 +15605,18 @@ App.populator('Calc', function(page, users) {
 			function calcLoveUsername(user1, user2) {
                 var hashsum = new String(user1).hashCode() + new String(user2).hashCode();
                 Math.seedrandom(hashsum);
+                Math.random();
+                Math.random();
                 return Math.floor(Math.random() * 91);
 			}
 			res = calcLovePic(u1pic, u2pic) + calcLoveUsername(u1pic, u2pic);
             if (calcLoveName(user1name, user2name) == 1) {
-                answer = statuses.romance[res / 10];
+                answer = statuses.romance[parseInt(res / 10)];
             } else {
-                answer = statuses.friend[res/ 10];
+                answer = statuses.friend[parseInt(res/ 10)];
             }
 		}
-		return "You are " + answer + "! (" + res + "%)";
+		return "With a Love Potential of " + res + "% you are destined to be " + answer + "!";
 	}
 
 	//Send Results: Via Kik
