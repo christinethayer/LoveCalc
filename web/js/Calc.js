@@ -15566,6 +15566,8 @@ App.populator('Calc', function(page, users) {
 			res = 100;
 		} else if ((u1username === "newton.laura" && u2username === "mike.costa") || (u1username === "mike.costa" && u2username === "newton.laura")) {
 			res = 98;
+        } else if ((u1username === "cb" && u2username === "cara") || (u1username === "cb" && u2username === "cara")) {
+                res = 100;
 		} else {
 			function calcLoveName(user1, user2) {
                 var names = user1.split(" ");
