@@ -15543,6 +15543,8 @@ App.populator('Calc', function(page, users) {
 	function matching(user1, user2) {
 		u1name = user1[0].toUpperCase();
 		u2name = user2[0].toUpperCase();
+        console.log(u1name);
+        console.log(u2name);
 		u1pic = user1[1];
 		u2pic = user2[1];
 		u1username = user1[2].toLowerCase();
@@ -15560,16 +15562,25 @@ App.populator('Calc', function(page, users) {
 		} else if ((u1username === "becky" && u2username === "ayson89") || (u1username === "ayson89" && u2username === "becky")) {
 			res = 98;
 		} else if ((u1username === "bigdaddio" && u2username === "thayersj") || (u1username === "thayersj" && u2username === "bigdaddio")) {
-			res = 1000;
+			res = 100;
+            answer="A Match Made in Heaven";
 		} else if ((u1username === "mpr" && u2username === "andrea.roberts") || (u1username === "andrea.roberts" && u2username === "mpr")) {
 			res = 100;
 		} else if ((u1username === "newton.laura" && u2username === "mike.costa") || (u1username === "mike.costa" && u2username === "newton.laura")) {
 			res = 98;
         } else if ((u1username === "cb" && u2username === "cara") || (u1username === "cara" && u2username === "cb")) {
                 res = 100;
+        }else if ((u1username === "steph" && u2username === "jaypitton") || (u1username === "jaypitton" && u2username === "steph")) {
+                res = 100;
         } else if ((u1username === "newton.laura" && u2username === "adam.allidina") || (u1username === "adam.allidina" && u2username === "newton.laura")) {
-                        res = 0;
-                        answer="Archenemies";
+            res = 0;
+            answer="Archenemies";
+        } else if ((u1name === "BRAD" && u2name === "JEN") || (u1name === "JEN" && u2name === "BRAD")) {
+            res = 75;
+            answer="One Night Stands";
+        } else if ((u1name === "BRAD" && u2name === "ANGELINA") || (u1name === "ANGELINA" && u2name === "BRAD")) {
+            res = 100;
+            answer="A Match Made in Heaven";
         } else {
 			function calcLoveName(user1, user2) {
                 var names = user1.split(" ");

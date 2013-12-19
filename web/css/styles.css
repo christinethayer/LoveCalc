@@ -114,8 +114,8 @@
 
 .app-content .userpic img{
 	text-align: center;
-	padding-top: 3px;
-	border-radius: 50%;
+	margin-top: 5px;
+	border-radius: 60%;
 }
 /* You Styling */
 .app-content .heartplus img{
@@ -149,7 +149,22 @@
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* Match Styling */
+#peopleText2{
+	padding-top: 15px;
+}
 .app-content .user1match{
+/*	float:left;
+	overflow: hidden;*/
+}
+.app-content .user2match{
+}
+.app-content .match{
+/*	text-align: center;
+	position: relative;*/
+}
+/* 
+app-content .user1match{
 	text-align: left;
 	padding-left: 7px;
 	float:left;
@@ -168,12 +183,14 @@
 	width:150px;
 }
 .app-content .user1match p{
+	text-align: center;
 	width:150px;
 }
 .app-content .user2match p{
+	text-align: center;
 	width:150px;
 }
-#user1name{
+/*#user1name{
 	text-align: center;
 }
 #user2name{
@@ -183,4 +200,4 @@
 .app-content .match{
 	text-align: center;
 	float:right;
-}
+}*/
