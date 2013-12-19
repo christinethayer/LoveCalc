@@ -15541,7 +15541,6 @@ App.populator('Calc', function(page, users) {
 	$(page).find("#matchResult").append(result);
 
 	function matching(user1, user2) {
-		console.log(user1);
 		u1name = user1[0].toUpperCase();
 		u2name = user2[0].toUpperCase();
 		u1pic = user1[1];
@@ -15566,9 +15565,12 @@ App.populator('Calc', function(page, users) {
 			res = 100;
 		} else if ((u1username === "newton.laura" && u2username === "mike.costa") || (u1username === "mike.costa" && u2username === "newton.laura")) {
 			res = 98;
-        } else if ((u1username === "cb" && u2username === "cara") || (u1username === "cb" && u2username === "cara")) {
+        } else if ((u1username === "cb" && u2username === "cara") || (u1username === "cara" && u2username === "cb")) {
                 res = 100;
-		} else {
+        } else if ((u1username === "newton.laura" && u2username === "adam.allidina") || (u1username === "adam.allidina" && u2username === "newton.laura")) {
+                        res = 0;
+                        answer="Archenemies";
+        } else {
 			function calcLoveName(user1, user2) {
                 var names = user1.split(" ");
                 var fname1 = names[0].toUpperCase();
