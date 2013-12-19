@@ -117,6 +117,7 @@
 	margin-top: 5px;
 	border-radius: 60%;
 }
+
 /* You Styling */
 .app-content .heartplus img{
 	text-align: center;
@@ -147,6 +148,14 @@
 }
 .app-content .friendPicker.active img{
 	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.app-content .boyfriend img{
+	text-align: center;
+	border-radius: 0;
+	padding-top: 20px;
+	height:100px; 
+	width: 100px;
 }
 
 /* Match Styling */
