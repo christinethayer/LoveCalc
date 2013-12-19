@@ -74,6 +74,7 @@
 	height:100%;
 	width:100%;
 	padding-top:10px;
+	padding-right:8px;
 	background-color:#C33;
 	text-align: center;
 	color:#FFFFFF;
@@ -150,10 +151,12 @@
 
 .app-content .user1match{
 	text-align: left;
+	padding-left: 7px;
 	float:left;
 }
 .app-content .user2match{
 	text-align: right;
+	padding-right: 7px;
 	float:right;
 }
 #user1name{

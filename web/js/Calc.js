@@ -15617,7 +15617,7 @@ App.populator('Calc', function(page, users) {
                 answer = statuses.friend[parseInt(res/ 10)];
             }
 		}
-		return "With a Love Potential of " + res + "% you are destined to be " + answer + "!";
+		return "With a Love Potential of " + res + "% you're destined to be " + answer + "!";
 	}
 
 	//Send Results: Via Kik
