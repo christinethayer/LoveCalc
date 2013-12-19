@@ -15493,8 +15493,8 @@ var fnames = {
     }
 };
 var statuses = {
-    "friend": ["Archenemies", "Bitter Rivals", "Unable to Stand Each Other", "Strangers", "Allies of Convenience", "Casual Acquaintances", "Good Friends", "Accomplices", "Thick as Thieves", "BFFs"],
-    "romance": ["Mutually Asexual", "Opposites that Don't Attract", "a Match that Would Never Work", "an Unlikely Couple", "One Night Stands", "Friends with Benefits", "Significant Others", "Lovers", "Life Partners", "Soulmates"]
+    "friend": ["Archenemies", "Bitter Rivals", "Unable to Stand Each Other", "Strangers", "Allies of Convenience", "Casual Acquaintances", "Good Friends", "Accomplices", "Thick as Thieves", "BFFs", "Joined by an Unbreakable Bond"],
+    "romance": ["Mutually Asexual", "Opposites that Don't Attract", "a Match that Would Never Work", "an Unlikely Couple", "One Night Stands", "Friends with Benefits", "Significant Others", "Lovers", "Life Partners", "Soulmates", "A Match Made in Heaven"]
 };
 
 App.populator('Calc', function(page, users) {
@@ -15570,10 +15570,13 @@ App.populator('Calc', function(page, users) {
 			function calcLoveName(user1, user2) {
                 var names = user1.split(" ");
                 var fname1 = names[0].toUpperCase();
-                var lname1 = names[names.length - 1];
+                var lname1 = names[names.length - 1].toUpperCase();
                 var names = user2.split(" ");
                 var fname2 = names[0].toUpperCase();
-                var lname2 = names[names.length - 1];
+                var lname2 = names[names.length - 1].toUpperCase();
+                if (lname1 === lname2) {
+                    return 3;
+                }
                 if (fnames[fname1] && fnames[fname2]) {
                     if (fnames[fname1].m > 0.5 && fnames[fname2].m < 0.5 ||
                             fnames[fname2].m > 0.5 && fnames[fname1].m < 0.5) {
@@ -15606,13 +15609,17 @@ App.populator('Calc', function(page, users) {
                 Math.seedrandom(hashsum);
                 Math.random();
                 Math.random();
-                return Math.floor(Math.random() * 90);
+                return Math.floor(Math.random() * 91);
 			}
 
 			res = calcLovePic(u1pic, u2pic) + calcLoveUsername(u1username, u2username);
 
-            if (calcLoveName(user1name, user2name) == 1) {
+            var nameFactor = calcLoveName(user1name, user2name);
+            if (nameFactor == 1) {
                 answer = statuses.romance[parseInt(res / 10)];
+            } else if (nameFactor == 3) {
+                res = Math.max(100, parseInt(res * 1.33));
+                answer = statuses.friend[parseInt(res/ 10)];
             } else {
                 answer = statuses.friend[parseInt(res/ 10)];
             }
