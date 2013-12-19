@@ -15652,4 +15652,14 @@ App.populator('Calc', function(page, users) {
 		});
 
 	});
+
+    function updateColumnHeights() {
+        var height = Math.max($('#user2name').height(),
+                              $('#user1name').height());
+        $('#user2name').height(height);
+        $('#user1name').height(height);
+        return height;
+    }
+    $(document).ready(function(){ updateColumnHeights(); });
+
 });
