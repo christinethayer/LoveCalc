@@ -11,11 +11,7 @@ App.populator('You', function(page, user) {
 		if (user1[1] === null) {
 			user1[1] = "img/noprofile.png";
 		}
-
-		var yourThumb = $('<img />');
-		yourThumb.attr('src', user1[1]);
-		$(page).find('#yourpic').replaceWith(yourThumb);
-		$(page).find('#yourpic').attr('src', user1[1]);
+		$(page).find('#yourpic').attr('src', user1[1])
 		$(page).find("#yourname").text(user1[0]);
 	})
 
@@ -41,6 +37,7 @@ App.populator('You', function(page, user) {
 				$(page).find('#heartp').remove();
 				$(page).find('#defaultText').remove();
 				$(page).find('.heartplus').removeClass('heartplus');
+				
 				$(page).find('#user2pic').attr('src', user2[1]);
 				$(page).find("#user2name").text(user2[0]);
 
