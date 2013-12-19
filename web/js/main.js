@@ -6,6 +6,7 @@
 
 	if (!cards.kik || !cards.kik.hasPermission || !cards.kik.hasPermission()) {
 		App.load('signup');
+		
 	} else {
 		if (cards.kik.returnToConversation) {
 			var user1 = new Array();

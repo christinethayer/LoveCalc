@@ -153,6 +153,7 @@
 	text-align: left;
 	padding-left: 7px;
 	float:left;
+	overflow: hidden;
 }
 .app-content .user2match{
 	text-align: right;
