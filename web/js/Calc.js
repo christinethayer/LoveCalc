@@ -15618,7 +15618,7 @@ App.populator('Calc', function(page, users) {
             if (nameFactor == 1) {
                 answer = statuses.romance[parseInt(res / 10)];
             } else if (nameFactor == 3) {
-                res = Math.max(100, parseInt(res * 1.33));
+                res = Math.min(100, parseInt(res * 1.33));
                 answer = statuses.friend[parseInt(res/ 10)];
             } else {
                 answer = statuses.friend[parseInt(res/ 10)];
