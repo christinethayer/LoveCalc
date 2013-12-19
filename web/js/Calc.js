@@ -15543,8 +15543,6 @@ App.populator('Calc', function(page, users) {
 	function matching(user1, user2) {
 		u1name = user1[0].toUpperCase();
 		u2name = user2[0].toUpperCase();
-        console.log(u1name);
-        console.log(u2name);
 		u1pic = user1[1];
 		u2pic = user2[1];
 		u1username = user1[2].toLowerCase();
@@ -15554,7 +15552,7 @@ App.populator('Calc', function(page, users) {
         var answer = "a Happy Couple";
 		if (u1username === u2username) {
 			res = 100;
-            answer = "Narcissism Defined"
+            answer = "in love with yourself"
         } else if (u1username === "christine" || u2username === "christine") {
         	res = 100;
 		} else if ((u1username === "adam.allidina" && u2username === "kylelobban") || (u1username === "kylelobban" && u2username === "adam.allidina")) {
