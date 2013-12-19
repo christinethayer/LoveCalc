@@ -15515,7 +15515,7 @@ App.populator('Calc', function(page, users) {
 	user1pic.attr('src', user1[1]);
 	$(page).find('#user1pic').replaceWith(user1pic);
 	if (user1[2] === undefined) {
-		user1[2] = "nonkikuser";
+		user1[2] = user1[0];
 	}
 
 	// User2: Name & Profile Pic to the match screen
@@ -15532,7 +15532,7 @@ App.populator('Calc', function(page, users) {
 	user2pic.attr('src', user2[1]);
 	$(page).find('#user2pic').replaceWith(user2pic);
 	if (user2[2] === undefined) {
-		user2[2] = "nonkikuser";
+		user2[2] = user2[0];
 	}
 
 	// Match Result: Matching algorithm
@@ -15541,6 +15541,7 @@ App.populator('Calc', function(page, users) {
 	$(page).find("#matchResult").append(result);
 
 	function matching(user1, user2) {
+		console.log(user1);
 		u1name = user1[0].toUpperCase();
 		u2name = user2[0].toUpperCase();
 		u1pic = user1[1];
@@ -15583,8 +15584,6 @@ App.populator('Calc', function(page, users) {
                 return 0;
 			}
 			function calcLovePic(user1, user2) {
-				console.log(user1);
-				console.log(user2);
 				if ((user1 !== "img/noprofile.png" && user2 === "img/noprofile.png") || (user1 === "img/noprofile.png" && user2 !== "img/noprofile.png")) {
 					return 0;
 				} else {
@@ -15609,7 +15608,9 @@ App.populator('Calc', function(page, users) {
                 Math.random();
                 return Math.floor(Math.random() * 90);
 			}
-			res = calcLovePic(u1pic, u2pic) + calcLoveUsername(u1pic, u2pic);
+
+			res = calcLovePic(u1pic, u2pic) + calcLoveUsername(u1username, u2username);
+
             if (calcLoveName(user1name, user2name) == 1) {
                 answer = statuses.romance[parseInt(res / 10)];
             } else {

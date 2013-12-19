@@ -11,7 +11,7 @@ App.populator('People', function(page) {
 
 		if (user1[0].value === "" || user2[0].value === "") {
 			App.dialog({
-				title: 'Unable to Calgit culate',
+				title: 'Unable to Calculate',
 				text: 'Names must be longer than 1 character',
 				okButton: 'OK'
 			});
