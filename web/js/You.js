@@ -14,7 +14,7 @@ App.populator('You', function(page, user) {
 
 		var yourThumb = $('<img />');
 		yourThumb.attr('src', user1[1]);
-		$(page).find('#yourpic').append(yourThumb);
+		$(page).find('#yourpic').replaceWith(yourThumb);
 		$(page).find("#yourname").text(user1[0]);
 	})
 
