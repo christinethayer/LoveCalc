@@ -20,6 +20,7 @@ http://zeptojs.com/zepto.min.js
 http://cdn.kik.com/cards/0/cards.js
 http://cdn.kik.com/app/1/app.js
 /js/main.js
+/js/toDataURLCustom.js
 /js/signup.js
 /js/Calc.js
 /js/Friends.js

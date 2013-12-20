@@ -15650,19 +15650,47 @@ App.populator('Calc', function(page, users) {
 		'user2': user2
 	};
 
+    console.log(user1[1]);
+    console.log(user2[1]);
+    var backgroundImage = new Image();
+    backgroundImage.src = "img/bg.png";
+    var user1Image = new Image();
+    user1Image.src = user1[1];;
+    var user2Image = new Image();
+    user2Image.src = user2[1];;
+
 	kikButton.clickable().on('click', function() {
+        var canvas = document.createElement('canvas'); 
+        canvas.width = 400;
+        canvas.height = 400;
+        var context=canvas.getContext("2d");
+
+        context.fillStyle = '#C33';
+        context.fillRect(0, 0, 400, 400);
+
 		var KikTitle = "yo";
 		var KikDescription = "You ain't a match";
 		var KikImg = "img/icon2.png";
 		var KikLinkData = JSON.stringify(linkData);
 
-		cards.kik.send({
-			title: KikTitle,
-			text: KikDescription,
-			pic: KikImg,
-			big: true,
-			linkData: KikLinkData
-		});
+        // context.drawImage(backgroundImage, 0, 0);
+        // context.drawImage(user1Image, 10, 10, 100, 100);
+        // context.drawImage(user2Image, canvas.width-user2Image.width-10, 10, 100, 100);
+        context.fillStyle = "#FFF";
+        context.font = "bold 48px Arial";
+        context.fillText(user1[0], ~~(0.5+400/2-context.measureText(user1[0]).width/2), 100);
+        context.fillText("+", ~~(0.5+400/2-context.measureText("+").width/2), 150);
+        context.fillText(user2[0], ~~(0.5+400/2-context.measureText(user2[0]).width/2), 200);
+        context.fillText("?", ~~(0.5+400/2-context.measureText("?").width/2), 250);
+
+
+        cards.kik.send({
+            title: KikTitle,
+            text: KikDescription,
+            pic: toDataURLCustomFunction(context, 0, 0, canvas.width, canvas.height),
+            big: true,
+            linkData: KikLinkData
+        });
 
 	});
 
