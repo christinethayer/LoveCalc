@@ -15692,7 +15692,7 @@ App.populator('Calc', function(page, users) {
 		var KikLinkData = JSON.stringify(linkData);
 
         context.fillStyle = "#FFF";
-        context.font = "bold 24px Arial";
+        context.font = "bold 28px Arial";
         context.fillText(user1[0], ~~(0.5+400/2-context.measureText(user1[0]).width/2), 100);
         context.fillText("+", ~~(0.5+400/2-context.measureText("+").width/2), 150);
         context.fillText(user2[0], ~~(0.5+400/2-context.measureText(user2[0]).width/2), 200);
