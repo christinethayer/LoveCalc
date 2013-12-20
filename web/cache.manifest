@@ -12,28 +12,28 @@ img/friends.png
 img/kik-button-small.png
 img/boyfriend.png
 
-# zerver:css/main.min.css
 http://cdn.kik.com/app/2-DEV/app.min.css
+
+# zerver:css/main.min.css
 /css/styles.css
 # /zerver
 
-# zerver:js/main.min.js
-/zerver/API.js
 http://zeptojs.com/zepto.min.js
 http://cdn.kik.com/cards/0/cards.js
 http://cdn.kik.com/app/2-DEV/app.min.js
-/js/main.js
-/js/toDataURLCustom.js
+
+# zerver:js/main.min.js
+/zerver/API.js
 /js/signup.js
+/js/seedrandom-min.js
+/js/toDataURLCustom.js
 /js/Calc.js
 /js/Friends.js
 /js/People.js
 /js/You.js
 /js/home.js
 /js/main.js
-/js/seedrandom-min.js
 # /zerver
-
 
 NETWORK:
 *

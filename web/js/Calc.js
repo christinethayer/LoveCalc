@@ -15650,8 +15650,6 @@ App.populator('Calc', function(page, users) {
 		'user2': user2
 	};
 
-    console.log(user1[1]);
-    console.log(user2[1]);
     var user1Image = new Image();
     user1Image.src = user1[1];;
     var user2Image = new Image();

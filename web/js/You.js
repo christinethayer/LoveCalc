@@ -11,12 +11,7 @@ App.populator('You', function(page, user) {
 		if (user1[1] === null) {
 			user1[1] = "img/noprofile.png";
 		}
-
-		// var yourThumb = $('<img />');
-		// yourThumb.attr('src', user1[1]);
-		// $(page).find('#yourpic').replaceWith(yourThumb);
 		$(page).find('#yourpic').attr('src', user1[1]);
-		//$(page).find('#yourpic').attr('src', user1[1]);
 		$(page).find("#yourname").text(user1[0]);
 	})
 
