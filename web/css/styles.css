@@ -182,6 +182,9 @@
 .app-content .user1match{
 	margin-top: 10px;
 }
+#matchResult{
+	padding-bottom: 10px;
+}
 .app-content .user2match{
 }
 .app-content .match{
