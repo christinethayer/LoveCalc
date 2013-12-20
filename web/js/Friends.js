@@ -28,18 +28,22 @@ App.populator('Friends', function(page) {
 				if (user1[1]) {
 					console.log(user1[1]);
 					cards.ready(function () {
-						cards.utils.preloadImage(user1[1], function () {
-							console.log(user1[1]);
-							$(page).find('#user1pic').attr('src', user1[1]);
+						cards.utils.preloadImage(user1[1], function (success) {
+               				if (success) {
+								console.log(user1[1]);
+								$(page).find('#user1pic').attr('src', user1[1]);
+							}
 						});
 					});
 				}
 				$(page).find('#user2pic').attr('src', 'img/noprofile.png');
 				if (user2[1]) {
 					cards.ready(function () {
-						cards.utils.preloadImage(user2[1], function () {
-							$(page).find('#user2pic').attr('src', user2[1]);
-							console.log("you should not happen");
+						cards.utils.preloadImage(user2[1], function (success) {
+               				if (success) {
+								$(page).find('#user2pic').attr('src', user2[1]);
+								console.log("you should not happen");
+							}
 						});
 					});
 				}
