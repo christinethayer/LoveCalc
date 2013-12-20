@@ -19,23 +19,36 @@ App.populator('Friends', function(page) {
 				//Defining User1 and User2
 				user1[0] = users[0].fullName;
 				user1[1] = users[0].thumbnail;
-				if (user1[1] === null ) {
-					user1[1] = "img/noprofile.png";
-				}
-
 				user1[2] = users[0].username;
 				user2[0] = users[1].fullName;
 				user2[1] = users[1].thumbnail;
-				if (user2[1] === null) {
-					user2[1] = "img/noprofile.png";
-				}
 				user2[2] = users[1].username;
+				 
+				$(page).find('#user1pic').attr('src', 'img/noprofile.png');
+				if (user1[1]) {
+					console.log(user1[1]);
+					cards.ready(function () {
+						cards.utils.preloadImage(user1[1], function () {
+							console.log(user1[1]);
+							$(page).find('#user1pic').attr('src', user1[1]);
+						});
+					});
+				}
+				$(page).find('#user2pic').attr('src', 'img/noprofile.png');
+				if (user2[1]) {
+					cards.ready(function () {
+						cards.utils.preloadImage(user2[1], function () {
+							$(page).find('#user2pic').attr('src', user2[1]);
+							console.log("you should not happen");
+						});
+					});
+				}
 
 				//Add UI to make it the same as You & Crush
 				$(page).find('#user1name').text(user1[0]);
-				$(page).find('#user1pic').attr('src', user1[1]);
+				//$(page).find('#user1pic').attr('src', user1[1]);
 				$(page).find('#user2name').text(user2[0]);
-				$(page).find('#user2pic').attr('src', user2[1]);
+				//$(page).find('#user2pic').attr('src', user2[1]);
 
 				//Once two users are selected add the Calculate button
 				var calcButton = $('<div />');

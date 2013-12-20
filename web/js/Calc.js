@@ -15509,12 +15509,20 @@ App.populator('Calc', function(page, users) {
 	user1name = user1[0];
 	$(page).find("#user1name").text(user1name);
 	var user1pic = $('<img />');
-	if (user1[1] === undefined) {
-		user1[1] = "img/noprofile.png";
-	}
-	user1pic.attr('src', user1[1]);
-	$(page).find('#user1pic').replaceWith(user1pic);
-	if (user1[2] === undefined) {
+
+	$(page).find('#user1pic').attr('src', 'img/noprofile.png');
+    if (user1[1]) {
+        cards.ready(function () {
+            cards.utils.preloadImage(user1[1], function (success) {
+                if (success) {
+                    console.log(user1[1]);
+                    $(page).find('#user1pic').attr('src', user1[1]);
+                }
+            });
+        });
+    }
+	
+    if (user1[2] === undefined) {
 		user1[2] = user1[0];
 	}
 
@@ -15526,11 +15534,18 @@ App.populator('Calc', function(page, users) {
 	user2name = user2[0];
 	$(page).find("#user2name").text(user2name);
 	var user2pic = $('<img />');
-	if (user2[1] === undefined) {
-		user2[1] = "img/noprofile.png";
-	}
-	user2pic.attr('src', user2[1]);
-	$(page).find('#user2pic').replaceWith(user2pic);
+
+    $(page).find('#user2pic').attr('src', 'img/noprofile.png');
+    if (user2[1]) {
+        cards.ready(function () {
+            cards.utils.preloadImage(user2[1], function (success) {
+                if (success) {
+                    $(page).find('#user2pic').attr('src', user2[1]);
+                }
+                console.log("you should not happen");
+            });
+        });
+    }   
 	if (user2[2] === undefined) {
 		user2[2] = user2[0];
 	}
@@ -15677,7 +15692,7 @@ App.populator('Calc', function(page, users) {
 		var KikLinkData = JSON.stringify(linkData);
 
         context.fillStyle = "#FFF";
-        context.font = "bold 48px Arial";
+        context.font = "bold 24px Arial";
         context.fillText(user1[0], ~~(0.5+400/2-context.measureText(user1[0]).width/2), 100);
         context.fillText("+", ~~(0.5+400/2-context.measureText("+").width/2), 150);
         context.fillText(user2[0], ~~(0.5+400/2-context.measureText(user2[0]).width/2), 200);
