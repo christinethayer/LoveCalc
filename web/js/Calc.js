@@ -15652,12 +15652,17 @@ App.populator('Calc', function(page, users) {
 
     console.log(user1[1]);
     console.log(user2[1]);
-    var backgroundImage = new Image();
-    backgroundImage.src = "img/bg.png";
     var user1Image = new Image();
     user1Image.src = user1[1];;
     var user2Image = new Image();
     user2Image.src = user2[1];;
+
+    var backgroundImage = new Image();
+
+    backgroundImage.onLoad = function () {
+        console.log("LOADED BACKGROUND IMAGE");
+    };
+    backgroundImage.src = "img/whitedouble.png";
 
 	kikButton.clickable().on('click', function() {
         var canvas = document.createElement('canvas'); 
@@ -15673,16 +15678,13 @@ App.populator('Calc', function(page, users) {
 		var KikImg = "img/icon2.png";
 		var KikLinkData = JSON.stringify(linkData);
 
-        // context.drawImage(backgroundImage, 0, 0);
-        // context.drawImage(user1Image, 10, 10, 100, 100);
-        // context.drawImage(user2Image, canvas.width-user2Image.width-10, 10, 100, 100);
         context.fillStyle = "#FFF";
         context.font = "bold 48px Arial";
         context.fillText(user1[0], ~~(0.5+400/2-context.measureText(user1[0]).width/2), 100);
         context.fillText("+", ~~(0.5+400/2-context.measureText("+").width/2), 150);
         context.fillText(user2[0], ~~(0.5+400/2-context.measureText(user2[0]).width/2), 200);
         context.fillText("?", ~~(0.5+400/2-context.measureText("?").width/2), 250);
-
+        context.drawImage(backgroundImage, ~~(0.5+400/2-context.measureText("???").width/2), 280, 70, 70);
 
         cards.kik.send({
             title: KikTitle,
