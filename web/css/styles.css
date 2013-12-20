@@ -44,7 +44,6 @@
 .app-topbar{
 	background-color:#b70f0f;
 	-webkit-box-shadow: 0 0 4px #000;
-	-moz-box-shadow: 0 0 4px #000;
 	box-shadow: 0 0 4px #000;
 }
 .app-android .home-page .app-title {
@@ -61,10 +60,8 @@
 	background-size: 60% 60%;
 	color: transparent;
 	-webkit-box-shadow: none;;
-	-moz-box-shadow: none;
 	box-shadow: none;
 	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
 	border: none;
 }
 .app-topbar .icon{
@@ -103,29 +100,34 @@
 }
 .app-content .leftheart img{
 	left:0;
+	-webkit-border-radius: 0;
 	border-radius: 0;
 	height:40px; 
 	width: 40px;
 }
 .app-content .rightheart img{
 	right:0;
+	-webkit-border-radius: 0;
 	border-radius: 0;
 	height:40px; 
 	width: 40px;
 }
 .app-content .heart img{
+	-webkit-border-radius: 0;
 	border-radius: 0;
 }
 
 .app-content .userpic img{
 	text-align: center;
 	margin-top: 5px;
+	-webkit-border-radius: 160px;
 	border-radius: 60%;
 }
 
 /* You Styling */
 .app-content .heartplus img{
 	text-align: center;
+	-webkit-border-radius: 0;
 	border-radius: 0;
 	height:200px; 
 	width: 200px;
@@ -134,6 +136,7 @@
 	background-color: rgba(0, 0, 0, 0.2);
 }
 .app-content#crushthumb img{
+	-webkit-border-radius: 0;
 	border-radius: 0;
 
 }
@@ -146,6 +149,7 @@
 	text-align: center;
 }
 .app-content .friendPicker img{
+	-webkit-border-radius: 0;
 	border-radius: 0;
 	padding-top: 20px;
 	height:250px; 
@@ -157,6 +161,7 @@
 
 .app-content .boyfriend img{
 	text-align: center;
+	-webkit-border-radius: 0;
 	border-radius: 0;
 	padding-top: 20px;
 	height:100px; 

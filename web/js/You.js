@@ -8,10 +8,14 @@ App.populator('You', function(page, user) {
 		user1[1] = user.thumbnail;
 		user1[2] = user.username;
 
-		if (user1[1] === null) {
-			user1[1] = "img/noprofile.png";
+		$(page).find('#yourpic').attr('src', 'img/noprofile.png');
+		if (user1[1]) {
+			cards.ready(function () {
+				cards.utils.preloadImage(user1[1], function () {
+					$(page).find('#yourpic').attr('src', user1[1]);
+				});
+			});
 		}
-		$(page).find('#yourpic').attr('src', user1[1]);
 		$(page).find("#yourname").text(user1[0]);
 	})
 
@@ -24,20 +28,25 @@ App.populator('You', function(page, user) {
 			if (!users) {
 				return; //Action was cancelled by user
 			} else {
+				$(page).find('#heartp').remove();
+				$(page).find('#defaultText').remove();
+				$(page).find('.heartplus').removeClass('heartplus');
+
 				user2[0] = users[0].fullName;
 				user2[1] = users[0].thumbnail;
 				user2[2] = users[0].username;
 
-				console.log(user2[1]);
-				if (user2[1] === null) {
-					console.log(user2[1]);
-					user2[1] = "img/noprofile.png";
-					console.log(user2[1]);
+				$(page).find('#user2pic').attr('src', 'img/noprofile.png');
+				if (user2[1]) {
+					console.log("PIC: "+user2[1]);
+					console.log("why don't you update");
+					cards.ready(function () {
+						cards.utils.preloadImage(user2[1], function () {
+							$(page).find('#user2pic').attr('src', user2[1]);
+							console.log("you should not happen");
+						});
+					});
 				}
-				$(page).find('#heartp').remove();
-				$(page).find('#defaultText').remove();
-				$(page).find('.heartplus').removeClass('heartplus');
-				$(page).find('#user2pic').attr('src', user2[1]);
 				$(page).find("#user2name").text(user2[0]);
 
 				//Once two users are selected add the Calculate button
