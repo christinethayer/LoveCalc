@@ -75,8 +75,6 @@
 .app-content{
 	height:100%;
 	width:100%;
-	padding-top:10px;
-	padding-right:8px;
 	background-color:#C33;
 	text-align: center;
 	color:#FFFFFF;
@@ -169,12 +167,20 @@
 }
 
 /* Match Styling */
+#maintext{
+	margin-top: 10px;
+}
+#yourname{
+	margin-top: 10px;
+}
+#peopleText{
+	margin-top: 10px;
+}
 #peopleText2{
 	padding-top: 15px;
 }
 .app-content .user1match{
-/*	float:left;
-	overflow: hidden;*/
+	margin-top: 10px;
 }
 .app-content .user2match{
 }
