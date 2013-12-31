@@ -27,5 +27,6 @@
 			}
 		}
 	}
-
+	
+	cards.metrics.enableGoogleAnalytics('UA-40353233-2', 'love-calc-kik.herokuapp.com');
 })(App);
