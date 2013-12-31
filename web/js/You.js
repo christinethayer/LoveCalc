@@ -23,6 +23,7 @@ App.populator('You', function(page, user) {
 
 	//Select a second user
 	$(page).find('#crushpic').clickable().on('click', function() {
+		$(page).find('#heartp').addClass('active');
 		cards.kik.pickUsers({
 			minResults: 0, // number >= 0
 			maxResults: 1 // number >  0

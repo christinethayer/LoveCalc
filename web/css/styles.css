@@ -132,9 +132,10 @@
 	height:200px; 
 	width: 200px;
 }
-.app-content .heartplus.active img{
+#heartp.active img{
 	background-color: rgba(0, 0, 0, 0.2);
 }
+
 .app-content#crushthumb img{
 	-webkit-border-radius: 0;
 	border-radius: 0;
