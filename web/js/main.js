@@ -1,5 +1,7 @@
 (function(App) {
 
+	kik.metrics.enableGoogleAnalytics('UA-40353233-2', 'love-calc-kik.herokuapp.com');
+
 	if (cards.browser && cards.browser.setOrientationLock) {
 		cards.browser.setOrientationLock('portrait');
 	}
@@ -27,6 +29,4 @@
 			}
 		}
 	}
-	
-	cards.metrics.enableGoogleAnalytics('UA-40353233-2', 'http://love-calc-kik.herokuapp.com');
 })(App);
